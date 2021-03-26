@@ -1,0 +1,17 @@
+<ion-content>
+  <p>Observable getAll()</p>
+  <ion-list>
+    <ion-item *ngFor="let item of (items$|async)">
+      {{item.title|json}}      
+    </ion-item>
+    <ion-label>
+      <ion-text>
+        <h3>{{item.name}}</h3>
+      </ion-text>
+      <ion-text >
+        <p>{{item.type}}</p>
+      </ion-text>
+    </ion-label>
+  </ion-list>
+</ion-content>
+
